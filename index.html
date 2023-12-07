@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        /* Your existing styles */
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#selectedBakery{
+    color: orange;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+    </style>
+    <script src="assets/script.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div class="min-h-[100vh]" style="background-image: url('images/.jpg'); background-position: center; background-size: cover;">
+            <header class="shadow">
+                <div class="w-[90%] max-w-[1200px] mx-auto">
+                    <div class="pt-[20px] pb-[10px] flex flex-col items-center gap-[10px]">
+                        <img src="images/ballot.png" alt="vote tattoo" class="w-[40px] md:w-[70px] animate-bounce">
+                        <span class="text-[18px] md:text-[24px] font-[600] text-[#2e2d2d] text-center leading-[1]">Vote Your Favourite Tattoo Artist</span>
+                    </div>
+                </div>
+            </header>
+            <div class="max-w-[800px] w-[90%] mx-auto my-[40px]">
+                <button id="voteButton" class="p-[10px_40px] bg-gray-400 text-white rounded" style="bottom: 45px; right: 3%; position: fixed;" disabled onclick="goToInstagram()">Vote me</button>
+            </div>
+            <div class="mt-[40px] w-[80%] md:w-[900px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-[20px]" style="margin-bottom: 40px;">
+                <label class="custom-radio cursor-pointer group">
+                    <input type="radio" class="hidden" name="bakery">
+                    <div class="radio-btn p-[20px] rounded-[10px] shadow-lg group-hover:shadow flex flex-col items-center gap-[10px]">
+                        <div class="flex justify-between items-center text-[18px] gap-[20px] card__details">
+                            <span>Amore Inks</span>
+                            <span>31%</span>
+                        </div>
+                        <img src="images/Amore.jpg" alt="tattoo" class="w-[100%] rounded-full">
+                    </div>
+                </label>
+                <label class="custom-radio cursor-pointer group">
+                    <input type="radio" class="hidden" name="bakery">
+                    <div class="radio-btn p-[20px] rounded-[10px] shadow-lg group-hover:shadow flex flex-col items-center gap-[10px]">
+                        <div class="flex justify-between items-center text-[18px] gap-[20px] card__details">
+                            <span>Shaun Inks</span>
+                            <span>29%</span>
+                        </div>
+                        <img src="images/Shaun.jpg" alt="tattoo" class="w-[100%] rounded-full">
+                    </div>
+                </label>
+                <label class="custom-radio cursor-pointer group">
+                    <input type="radio" class="hidden" name="bakery">
+                    <div class="radio-btn p-[20px] rounded-[10px] shadow-lg group-hover:shadow flex flex-col items-center gap-[10px]">
+                        <div class="flex justify-between items-center text-[18px] gap-[20px] card__details">
+                            <span>Fred Inks</span>
+                            <span>14%</span>
+                        </div>
+                        <img src="images/Fred.jpg" alt="tattoo" class="w-[100%] rounded-full">
+                    </div>
+                </label>
+                <label class="custom-radio cursor-pointer group">
+                    <input type="radio" class="hidden" name="bakery">
+                    <div class="radio-btn p-[20px] rounded-[10px] shadow-lg group-hover:shadow flex flex-col items-center gap-[10px]">
+                        <div class="flex justify-between items-center text-[18px] gap-[20px] card__details">
+                            <span>Bridget Inks</span>
+                            <span>5%</span>
+                        </div>
+                        <img src="images/Bridget.jpeg" alt="tattoo" class="w-[100%] rounded-full">
+                    </div>
+                </label>
+                <label class="custom-radio cursor-pointer group">
+                    <input type="radio" class="hidden" name="bakery">
+                    <div class="radio-btn p-[20px] rounded-[10px] shadow-lg group-hover:shadow flex flex-col items-center gap-[10px]">
+                        <div class="flex justify-between items-center text-[18px] gap-[20px] card__details">
+                            <span>Lissane Inks</span>
+                            <span>6%</span>
+                        </div>
+                        <img src="images/Lissane.jpeg" alt="tattoo" class="w-[100%] rounded-full">
+                    </div>
+                </label>
+                <label class="custom-radio cursor-pointer group">
+                    <input type="radio" class="hidden" name="bakery">
+                    <div class="radio-btn p-[20px] rounded-[10px] shadow-lg group-hover:shadow flex flex-col items-center gap-[10px]">
+                        <div class="flex justify-between items-center text-[18px] gap-[20px] card__details">
+                            <span>Sincerely, Sam Inks</span>
+                            <span>15%</span>
+                        </div>
+                        <img src="images/sincerely-sam-cakes.jpg" alt="tattoo" class="w-[100%] rounded-full">
+                    </div>
+                </label>
+            </div>
+            <footer class="bg-black">
+                <div class="py-[10px] max-w-[1200px] w-[90%] mx-auto text-white text-[14px] font-[300]" style="text-align: center;">
+                    <span>© 2023 TinyVotes. All rights reserved.</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content" id="modalContent">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>You want to vote for <span id="selectedBakery"></span>?</p>
+            <p>Continue with Instagram to complete this process.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // ... (your existing code)
+        
+            const voteButton = document.getElementById('voteButton');
+            const modal = document.getElementById('myModal');
+            const modalContent = document.getElementById('modalContent');
+            const selectedBakerySpan = document.getElementById('selectedBakery');
+        
+            // Function to show the modal
+            function showModal() {
+                modal.style.display = 'block';
+            }
+        
+            // Event listener for the orange button
+            voteButton.addEventListener('click', function () {
+                if (!voteButton.disabled) {
+                    // Get the selected radio option
+                    const selectedRadio = document.querySelector('input[type="radio"]:checked');
+                    if (selectedRadio) {
+                        // Set the content of the modal
+                        selectedBakerySpan.textContent = selectedRadio.parentNode.querySelector('.card__details span:first-child').textContent;
+                        showModal();
+                    }
+                }
+            });
+        });
+        
+        // Function to close the modal
+        function closeModal() {
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
